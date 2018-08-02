@@ -26,6 +26,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
                 
                 guard let movies = movies else { return }
                 self.movies = movies
+                self.tableView.isHidden = false
                 self.tableView.reloadData()
                 
             }
@@ -37,8 +38,16 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         movieSearchBar.delegate = self
-        
+        self.tableView.rowHeight = 600
     }
+    
+    
+    // MARK: - Search Bar
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+    }
+    
     
     // MARK: - Table view data source
     
@@ -48,18 +57,26 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         return movies?.count ?? 0
     }
     
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
         
         guard let movies = movies else {return UITableViewCell()}
-        
+
         let movie = movies[indexPath.row]
         cell.updateViews(movies: movie)
-        
+
         return cell
     }
     
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -73,5 +90,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             
         }
     }
-    
 }
+    
+    
+
+

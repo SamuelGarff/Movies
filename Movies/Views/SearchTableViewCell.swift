@@ -31,9 +31,9 @@ class SearchTableViewCell: UITableViewCell {
     
     func updateViews(movies: Movies) {
         
-//        self.movieTitle.text = movies.title
-//        self.movieDescription.text = movies.overview
-//        self.movieRating.text = "\(movies.vote_Average)"
+        self.movieTitle.text = movies.title
+        self.movieDescription.text = movies.overview
+        self.movieRating.text = "\(movies.vote_Average)"
         
         MoviesController.shared.fetchImageWith(pathComponent: movies.imageEndpoint) { (image) in
             

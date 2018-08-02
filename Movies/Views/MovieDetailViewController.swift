@@ -18,11 +18,12 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var imageLabel: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UITextView!
     
     func updateViews(movie: Movies) {
         
-        self.titleLabel.text = movie.title
+//        self.titleLabel.text = movie.title
+        self.navigationItem.title = movie.title
         self.descriptionLabel.text = movie.overview
         self.ratingLabel.text = "\(movie.vote_Average)"
         
