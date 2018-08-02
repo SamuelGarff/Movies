@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		7AA0EC0B2113937B00A109DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0EC0A2113937B00A109DA /* AppDelegate.swift */; };
-		7AA0EC0D2113937B00A109DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0EC0C2113937B00A109DA /* ViewController.swift */; };
 		7AA0EC102113937B00A109DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0EC0E2113937B00A109DA /* Main.storyboard */; };
 		7AA0EC122113937B00A109DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0EC112113937B00A109DA /* Assets.xcassets */; };
 		7AA0EC152113937B00A109DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0EC132113937B00A109DA /* LaunchScreen.storyboard */; };
 		7AA0EC202113937B00A109DA /* MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0EC1F2113937B00A109DA /* MoviesTests.swift */; };
 		7AA0EC2B2113937B00A109DA /* MoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0EC2A2113937B00A109DA /* MoviesUITests.swift */; };
+		7AA0EC3D2113946A00A109DA /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0EC3C2113946A00A109DA /* Movies.swift */; };
+		7AA0EC3F2113948700A109DA /* MoviesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0EC3E2113948700A109DA /* MoviesController.swift */; };
+		7AA0EC41211394D500A109DA /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0EC40211394D500A109DA /* SearchTableViewController.swift */; };
+		7AA0EC432113950600A109DA /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0EC422113950600A109DA /* SearchTableViewCell.swift */; };
+		7AA0EC452113952F00A109DA /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0EC442113952F00A109DA /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		7AA0EC072113937B00A109DA /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA0EC0A2113937B00A109DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7AA0EC0C2113937B00A109DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7AA0EC0F2113937B00A109DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7AA0EC112113937B00A109DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AA0EC142113937B00A109DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		7AA0EC262113937B00A109DA /* MoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA0EC2A2113937B00A109DA /* MoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITests.swift; sourceTree = "<group>"; };
 		7AA0EC2C2113937B00A109DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AA0EC3C2113946A00A109DA /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		7AA0EC3E2113948700A109DA /* MoviesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesController.swift; sourceTree = "<group>"; };
+		7AA0EC40211394D500A109DA /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		7AA0EC422113950600A109DA /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		7AA0EC442113952F00A109DA /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,10 @@
 		7AA0EC092113937B00A109DA /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				7AA0EC0A2113937B00A109DA /* AppDelegate.swift */,
-				7AA0EC0C2113937B00A109DA /* ViewController.swift */,
-				7AA0EC0E2113937B00A109DA /* Main.storyboard */,
-				7AA0EC112113937B00A109DA /* Assets.xcassets */,
-				7AA0EC132113937B00A109DA /* LaunchScreen.storyboard */,
-				7AA0EC162113937B00A109DA /* Info.plist */,
+				7AA0EC3A211393E400A109DA /* Storyboard */,
+				7AA0EC39211393B800A109DA /* Models & Controllers */,
+				7AA0EC38211393AB00A109DA /* Views */,
+				7AA0EC3B2113940700A109DA /* Resources */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -123,6 +129,44 @@
 				7AA0EC2C2113937B00A109DA /* Info.plist */,
 			);
 			path = MoviesUITests;
+			sourceTree = "<group>";
+		};
+		7AA0EC38211393AB00A109DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7AA0EC40211394D500A109DA /* SearchTableViewController.swift */,
+				7AA0EC422113950600A109DA /* SearchTableViewCell.swift */,
+				7AA0EC442113952F00A109DA /* MovieDetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7AA0EC39211393B800A109DA /* Models & Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7AA0EC3C2113946A00A109DA /* Movies.swift */,
+				7AA0EC3E2113948700A109DA /* MoviesController.swift */,
+			);
+			path = "Models & Controllers";
+			sourceTree = "<group>";
+		};
+		7AA0EC3A211393E400A109DA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7AA0EC0E2113937B00A109DA /* Main.storyboard */,
+				7AA0EC132113937B00A109DA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		7AA0EC3B2113940700A109DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7AA0EC0A2113937B00A109DA /* AppDelegate.swift */,
+				7AA0EC112113937B00A109DA /* Assets.xcassets */,
+				7AA0EC162113937B00A109DA /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AA0EC0D2113937B00A109DA /* ViewController.swift in Sources */,
+				7AA0EC3D2113946A00A109DA /* Movies.swift in Sources */,
 				7AA0EC0B2113937B00A109DA /* AppDelegate.swift in Sources */,
+				7AA0EC3F2113948700A109DA /* MoviesController.swift in Sources */,
+				7AA0EC41211394D500A109DA /* SearchTableViewController.swift in Sources */,
+				7AA0EC452113952F00A109DA /* MovieDetailViewController.swift in Sources */,
+				7AA0EC432113950600A109DA /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZR9ND5B77;
-				INFOPLIST_FILE = Movies/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Movies/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SamuelGBryson.Movies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,7 +491,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZR9ND5B77;
-				INFOPLIST_FILE = Movies/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Movies/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SamuelGBryson.Movies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
